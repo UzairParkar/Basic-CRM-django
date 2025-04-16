@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %} Details {% endblock title %}
+
+
+{% block content %}
+<a href="{% url 'home' %}" type="button" class="btn btn-outline-dark btn-sm mx-1">back</a>
+
+<table class="table table-hover mx-auto mt-5">
+    <thead class="table-dark">
+        <th>first_name</th>
+        <th>last_name</th>
+        <th>created_at</th>
+        <th>updated_at</th>
+        <th>email</th>
+        <th>phone</th>
+        <th>address</th>
+        <th>city</th>
+        <th>state</th>
+    </thead>
+    <tbody>
+        <tr><td>{{customer_records.first_name}}</td>
+    <td>{{customer_records.last_name}}</td>
+    <td>{{customer_records.created_at}}</td>
+    <td>{{customer_records.updated_at}}</td>
+    <td>{{customer_records.email}}</td>
+    <td>{{customer_records.phone}}</td>
+    <td>{{customer_records.address}}</td>
+    <td>{{customer_records.city}}</td>
+    <td>{{customer_records.state}}</td>
+</tr>
+    </tbody>
+</table> 
+{% endblock content %}
+    
+    
